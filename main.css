@@ -1,28 +1,47 @@
 .board{
+    margin: auto;
+    margin-top: 10%;
     width: 500px;
     height: 500px;
 }
 
 body {
     background-color: wheat;
-   
-    
   }
   
-  .cell {
+
+.cell {
     width: 30px;
     height: auto;
   }
   
   table {
     margin: auto;
+   
   }
   
   .cell {
     width: 40px;
     height: 40px;
     background-color: grey;
+    text-align: center;
   }
+  .restart{
+
+    margin-block: auto;
+
+  }
+ .levels{
+    margin-block: auto;
+ } 
+
+  footer {
+    background-color: lightgrey;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 2px dotted black;
+    text-align: center;
+}
 
   td {
     color: black;

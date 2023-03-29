@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="onInit()">
+    <div><button class="restart" onclick="onInit()">😃</button></div>
+    <div class="levels">
+        <button onclick="onChangeLevel(4)">Eazy (16)</button>
+        <button onclick="onChangeLevel(8)">Medium(64)</button>
+        <button onclick="onChangeLevel(12)">Hard (144)</button>
+      </div>
     <div class="board"></div>
     <script src="util.js"></script>
    <script src="main.js"></script> 
 </body>
+<footer><h3>Omer yossef</h3> <p><a href="mailto:omeryossef@gmail.com">Contact</a></p></footer>
+
 </html>

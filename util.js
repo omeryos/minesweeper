@@ -140,8 +140,8 @@ function UtRenderBoard(mat, selector) {
       const className = `cell cell-${i}-${j}`
        
       strHTML += `<td onClick="onCellClicked(this,${i},${j})" class="${className}">`
-      strHTML+=cell.minesAroundCount 
-      if (cell.isMine === true) strHTML += 'MINE '
+      // strHTML+=cell.minesAroundCount 
+      // if (cell.isMine === true) strHTML += 'MINE'
       
     }
     strHTML += '</td></tr>'
@@ -196,6 +196,11 @@ function getClassName(location) {
 function playSound() {
   const sound = new Audio('sound/sound.mp4')
   sound.play()
+}
+
+function grabElement(){
+  const elModal = document.querySelector('.modal')
+  elModal
 }
 
 
