@@ -1,0 +1,38 @@
+.board{
+    width: 500px;
+    height: 500px;
+}
+
+body {
+    background-color: wheat;
+   
+    
+  }
+  
+  .cell {
+    width: 30px;
+    height: auto;
+  }
+  
+  table {
+    margin: auto;
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+  }
+
+  td {
+    color: black;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+   
+    text-align: center;
+    
+    border: 2px solid;
+    border-top-color:black;
+   
+  }
