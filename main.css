@@ -1,57 +1,122 @@
-.board{
-    margin: auto;
-    margin-top: 10%;
-    width: 500px;
-    height: 500px;
+.board {
+  margin: auto;
+  margin-top: 10%;
+  width: 500px;
+  height: 500px;
 }
 
 body {
-    background-color: wheat;
-  }
-  
-
-.cell {
-    width: 30px;
-    height: auto;
-  }
-  
-  table {
-    margin: auto;
-   
-  }
-  
-  .cell {
-    width: 40px;
-    height: 40px;
-    background-color: grey;
-    text-align: center;
-  }
-  .restart{
-
-    margin-block: auto;
-
-  }
- .levels{
-    margin-block: auto;
- } 
-
-  footer {
-    background-color: lightgrey;
-    padding: 10px;
-    margin-top: 10px;
-    border-top: 2px dotted black;
-    text-align: center;
+  background-color: wheat;
 }
 
-  td {
-    color: black;
-    height: 30px;
-    width: 30px;
-    background-color: grey;
-   
-    text-align: center;
-    
-    border: 2px solid;
-    border-top-color:black;
-   
-  }
+button {
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  width: auto;
+
+}
+button .timer-button{
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  width: auto;
+
+}
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  text-align: center;
+}
+.dark-mode{
+  background-color: black;
+  color: white;
+}
+
+footer {
+  background-color: lightgrey;
+  padding: 10px;
+  margin-top: 10px;
+  border-top: 2px dotted black;
+  text-align: center;
+}
+
+
+
+
+.lives-count{
+ 
+  border: 3px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  text-align: center;
+  display: block;
+  margin: auto;
+  background-color: grey;
+  height: auto;
+  width: 100px;
+  top: 180px; 
+  left: 25%;
+}
+.lose{
+  display: none;
+  font-size: large;
+  font-weight: 600;
+  left: 40%;
+  margin: auto;
+  text-align: center;
+  background-color: brown;
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  border: 3px solid black;
+  align-content: center;
+
+
+}
+
+
+
+.restart {
+  left: 400px;
+  width: 100px;
+  
+}
+
+table {
+  margin: auto;
+  top: 50%;
+  left: 50%;
+}
+
+
+td {
+  color: black;
+  height: 30px;
+  width: 30px;
+  background-color: grey;
+
+  text-align: center;
+
+  border: 2px solid;
+  border-top-color: black;
+
+}
+
+.win {
+  display: none;
+  font-size: large;
+  font-weight: 600;
+  left: 40%;
+  margin: auto;
+  text-align: center;
+  background-color: brown;
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  border: 3px solid black;
+  align-content: center;
+}
