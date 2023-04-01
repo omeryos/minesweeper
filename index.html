@@ -7,21 +7,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mine sweeper</title>
-  <h3 id= "countup">00:00:00</h3>
+  <div class= "countup"><h3 >00:00:00</h3></div>
   
 </head>
 
 <body class="dark-mode" onload="onInit()" oncontextmenu="return false">
-
-  <div><button class="restart" onclick="onInit()">😃</button>
+  <div class="title"><h1>Minesweeper!</h1></div>
+  <div><button class="restart" onclick="onInit()">😃</button></div>
+  <div class="buttons">
   <button onclick="toggleDarkMode()">Toggle Dark mode</button>
   <button onclick="onChangeDifficulty(4)">Eazy (16)</button>
   <button onclick="onChangeDifficulty(8)">Medium(64)</button>
   <button onclick="onChangeDifficulty(12)">Hard (144)</button>
 </div>
+
   <div class="win"></div> <div class="lose"></div>
   <div class="board"></div>
   <div class="lives-count"></div>
+ 
   <script src="util.js"></script>
   <script src="main.js"></script>
 </body>

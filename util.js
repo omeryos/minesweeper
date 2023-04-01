@@ -77,7 +77,7 @@ function upTimer() {
     var hour = Math.floor(gSeconds / 3600);
     var minute = Math.floor((gSeconds - hour * 3600) / 60);
     var updSecond = gSeconds - (hour * 3600 + minute * 60);
-    document.getElementById("countup").innerHTML = hour + ":" + minute + ":" + updSecond;
+    document.querySelector(".countup").innerHTML = hour + ":" + minute + ":" + updSecond;
 }
 function toggleDarkMode() {
   var element = document.body;
