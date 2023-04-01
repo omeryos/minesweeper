@@ -21,12 +21,14 @@ button {
   background-color: grey;
   text-align: center;
 }
-.countup{
+
+.countup {
   margin: auto;
   height: 20px;
   width: 60px;
 }
-.dark-mode{
+
+.dark-mode {
   background-color: black;
   color: white;
 }
@@ -43,21 +45,22 @@ footer {
 
 
 
-.lives-count{
- 
+.lives-count {
+
   border: 3px solid black;
   font-family: Arial, Helvetica, sans-serif;
-  
+
   text-align: center;
-  
+
   background-color: grey;
   bottom: 450px;
   width: 100px;
   position: absolute;
-  
-  
+
+
 }
-.lose{
+
+.lose {
   display: none;
   font-size: large;
   font-weight: 600;
@@ -99,14 +102,16 @@ td {
   border-top-color: black;
 
 }
-.title{
-height: 50px;
-width: 350px;
-margin: auto;
-text-align: center;
+
+.title {
+  height: 50px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
 
 
 }
+
 .win {
   display: none;
   font-size: large;

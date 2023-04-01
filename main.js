@@ -65,12 +65,7 @@ function renderBoard(board) {
 }
 function onCellClicked(elCell, i, j) {
     checkGameOver()
-    
     if (gBoard[i][j].isShown || !gGame.isOn) return
-    
-    //gBoard[i][j].isShown = true
-    //gGame.shownCount++
-    
     if (!gGame.isOn) {
         return
     }
@@ -79,7 +74,7 @@ function onCellClicked(elCell, i, j) {
         setMinesNegsCount(gBoard)
         firstClick = false
     }
-    if (!gBoard[i][j].isMine && !gBoard.isShown ){
+    if (!gBoard[i][j].isMine && !gBoard.isShown) {
         elCell = document.querySelector(`.cell-${i}-${j}`)
         elCell.innerText = gBoard[i][j].minesAroundCount
         gGame.shownCount++
@@ -87,19 +82,17 @@ function onCellClicked(elCell, i, j) {
     if (gBoard[i][j].minesAroundCount === 0) {
         elCell.innerText = gBoard[i][j].minesAroundCount
         gBoard[i][j].isShown = true
-       
-        expandShown(gBoard,elCell,i,j)
+        expandShown(gBoard, elCell, i, j)
     }
     if (gBoard[i][j].isMine) {
         gBoard[i][j].isShown = true
-        
         elCell.innerText = MINE
         gLives--
         const elLivesCount = document.querySelector('.lives-count')
         elLivesCount.innerText = `Lives left : ${gLives} `
     }
     checkGameOver()
-    console.log('isShown count',gGame.shownCount)
+
 }
 function onCellMarked(cell, i, j) {
     cell = gBoard[i][j]
@@ -107,7 +100,6 @@ function onCellMarked(cell, i, j) {
     if (!cell.isMarked) {
         cell.isMarked = true;
         if (gBoard[i][j].isMine) gGame.markedCount++;
-        console.log('gGame marked count on cell marked',gGame.markedCount)
         renderCell(i, j, MARK)
     }
     else if (cell.isMarked) {
@@ -127,8 +119,8 @@ function checkGameOver() {
         elLoseModal.style.display = 'block';
         return
     }
-        //if (gGame.markedCount === gLevel.MINES && gLives > 0 || gLives > 0 && gGame.shownCount === ((gLevel.SIZE * gLevel.SIZE) - gLevel.MINES)) {
-    if (gGame.markedCount ===  gGame.markedCount && gGame.shownCount === (gLevel.SIZE ** 2 -  gGame.markedCount)){
+
+    if (gGame.markedCount === gGame.markedCount && gGame.shownCount === (gLevel.SIZE ** 2 - gGame.markedCount)) {
         const elWinModal = document.querySelector('.restart')
         elWinModal.innerHTML = PLAYER_WIN
         const elModal = document.querySelector('.win')
@@ -154,35 +146,20 @@ function onChangeDifficulty(inputSize) {
     }
     onInit()
 }
-// function VER1expandShown(board, elCell, i, j) {
 
-//     if (i < 0 || j < 0 || i > board.length || j > board[0].length) {
-//         return;
-//     }
-//     if (board[i][j].minesAroundCount > 0) {
-//         return;
-//     }
-//     gGame.shownCount++
-//     var elCell = document.querySelector(`.cell-${i}-${j}`)
-//     elCell.innerText = board[i][j].minesAroundCount
-
-// }
 
 function expandShown(board, elCell, idxI, idxJ) {
     for (var i = idxI - 1; i <= idxI + 1; i++) {
-       
+
         if (i < 0 || i >= board.length) continue
         for (var j = idxJ - 1; j <= idxJ + 1; j++) {
-            
+
             elCell = document.querySelector(`.cell-${i}-${j}`)
             if (i === idxI && j === idxJ) continue
-            
+
             if (j < 0 || j >= board[0].length) continue
 
-            if (!gBoard[i][j].isShown && !gBoard.isMine &&gBoard[i][j].minesAroundCount === 0 ) {
-                console.log('gboard[i][j]',gBoard[i][j])
-                console.log('elcell', elCell)
-                console.log('isShown',gGame.shownCount)
+            if (!gBoard[i][j].isShown && !gBoard.isMine && gBoard[i][j].minesAroundCount === 0) {
                 board[i][j].isShown = true
                 gGame.shownCount++
                 elCell.innerText = gBoard[i][j].minesAroundCount
